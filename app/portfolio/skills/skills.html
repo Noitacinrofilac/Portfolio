@@ -1,0 +1,74 @@
+<div ng-controller="skillsController as sCtrl">
+	<md-content layout-padding layout="column" layout-gt-sm="row">
+		<div ng-repeat="s in sCtrl.skills" flex-xs flex-gt-xs>
+			<md-card>
+				<md-card-title class="{{s.bgcolor}}" >
+					<md-card-title-text>
+						<span class="md-headline" style="text-align: center">{{s.name}}</span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-actions layout="column" layout-align="end center">
+					<span fex></span>
+					<div layout="row" >
+						<div class="skillDetails {{s.bgcolor}}" ng-repeat="d in s.details">
+							{{d}}
+						</div>
+					</div >
+					<span fex></span>
+					<div class="skillDescription" >
+						{{s.description}}
+					</div>
+					<span fex></span>
+					<div layout="row">
+						{{s.value * 10}}%
+					</div>
+					<div class="skillRating bg-grey" layout="row">
+						<div ng-repeat="x in [0,1,2,3,4,5,6,7,8,9]" class="atomicRating {{s.bgcolor}}" ng-class="{'bg-grey' : x >= s.value}" >
+							<span ></span>
+						</div>
+					</div>
+					<div layout="column" >
+
+						<div layout="row" layout-align="center start">
+							<div ng-repeat="e in s.experience" layout-padding>
+								<img class="projectLogo" ng-src="{{sCtrl.getProject(e)}}" />
+							</div>
+						</div>
+					</div>
+				</md-card-actions>
+			</md-card>
+		</div>
+	</md-content>
+	<!--
+	<div ng-repeat="s in sCtrl.skills" layou-align="center start" layout="column" layout-padding flex>
+	<div layout-gt-sm="column" layout="row">
+	<md-subheader flex=>
+	{{s.name}}
+	</md-subheader>
+	<div layout="row" layout-padding flex>
+	<div layout="column" ng-repeat="x in [0,1,2,3,4,5,6,7,8,9]" class="test" ng-class="{'testblue' :x < s.value }" flex>
+	<span flex></span>
+	</div>
+	</div>
+	<ul>
+	<li ng-repeat="d in s.description" flex>
+	<em>{{d}}</em>
+	</li>
+	</ul>
+
+	</div>
+	<div layout-gt-sm="column" layout="row">
+	<div>
+	<p>
+	Worked with it:
+	</p>
+	</div>
+	<div layout="row" layout-align="center start">
+	<div ng-repeat="e in s.experience" layout-padding>
+	<img class="projectLogo" ng-src="{{sCtrl.getProject(e)}}" />
+	</div>
+	</div>
+	</div>
+	</div>
+	-->
+</div>

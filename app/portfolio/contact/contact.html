@@ -1,0 +1,45 @@
+<div ng-controller="contactController as cCtrl">
+	<div layout="column" layout-gt-md="row" layout-align="center center" flex="100">
+		<div class="contact-element" id="contactLinkedin">
+			<a target="_blank" ng-href="{{cCtrl.contact.linkedin}}"><img src="assets/icons/linkedin.png" style="height:100px;width: 100px;"/></a>
+		</div>
+		<div class="contact-element" id="contactDownload">
+			<a target="_blank" href="google.com"><img src="assets/icons/downloadIcon.png" style="height:100px;width: 100px;"/></a>
+		</div>
+		<div class="contact-element" id="email" layout="column">
+			<div layout="row" layout-align="center start">
+				<md-icon md-svg-icon="email" style="margin-right: 2%"></md-icon>
+				<p class="center-text">
+					{{cCtrl.contact.email}}
+				</p>
+			</div>
+			<md-button class="md-raised md-primary" ng-click="cCtrl.copyToClipboard('email')" style="width: 100%">
+				Save it !
+			</md-button>
+		</div>
+		<div class="contact-element" id="phone" layout="column">
+			<div layout="row" layout-align="center start">
+					<md-icon md-svg-icon="cellphone" flex></md-icon>
+					<p class="center-text" flex="90">
+						{{cCtrl.contact.phone}}
+					</p>
+				</div>
+			<md-button class="md-raised md-primary" ng-click="cCtrl.copyToClipboard('phone')"  style="width: 100%">
+				Save it!
+			</md-button>
+		</div>
+	</div>
+	<div layout="column" layout-gt-md="row">
+		<div id="address" flex="20" layout="column">
+			<div layout="row">
+				<md-icon md-svg-icon="home" flex="10"></md-icon>
+				<p class="center-text" flex>
+					{{cCtrl.contact.address}}
+				</p>
+			</div>
+		</div>
+		<div flex="80" show-gt-md>
+			<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+		</div>
+	</div>
+</div>

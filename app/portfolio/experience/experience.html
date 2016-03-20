@@ -1,0 +1,32 @@
+<div ng-controller="experienceController as expCtrl">
+	<div class="experience" ng-repeat="exp in expCtrl.experienceList" layout="row">
+		<div flex="20" hide show-gt-sm>
+			<a target="_blank" ng-href="http://{{exp.link}}"><img class="companyLogo" ng-src="{{exp.logoSrc}}"/></a>
+		</div>
+		<div class="expContent" flex>
+			<div class="expHeader">
+				<h3 class="expTitle"><a target="_blank" ng-href="http://{{exp.link}}">{{exp.company}}</a></h3>
+				<div layout="row">
+					<div flex="35">
+						<md-icon md-svg-icon="calendar"></md-icon>{{exp.date.start}} - {{exp.date.end}}
+					</div>
+					<div flex>
+						<em> <md-icon md-svg-icon="school"></md-icon> {{exp.subject}} </em>
+					</div>
+				</div>
+			</div>
+			<div class="expInformation">
+				<p>
+					{{exp.description}}
+				</p>
+			</div>
+			<div class="technologies" layout="row" layout-align="center start">
+				<span flex></span>
+				<div class="technologie" ng-repeat="tech in exp.technologies" flex>
+					<img class="techLogo" ng-src="{{getTech(tech).img}}" title="{{getTech(tech).desc}}">
+				</div>
+				<span flex></span>
+			</div>
+		</div>
+	</div>
+</div>

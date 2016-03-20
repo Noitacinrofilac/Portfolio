@@ -1,0 +1,65 @@
+<h1>Projects</h1>
+
+<div class="projects" ng-controller='projectController as pCtrl'>
+	<md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column">
+	<!--Category 1-->
+		<div flex="50" flex-sm="100" flex-xs="100" layout="column">
+			<md-card ng-repeat='p in projects' ng-if="p.category==1">
+				<img ng-src="{{p.imgSrc}}" class="sm-card-image" alt="Loading" style="max-height: 100px;">
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-headline">{{p.name}}</span>
+						<span class="md-subhead">{{p.desc}}</span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-actions layout="row" >
+					<div layout="column" layout-align="center start" flex="10">
+						<md-button aria-label="Github" class="md-icon-button">
+							<md-icon md-svg-icon="github-box" aria-label="Github" ></md-icon>
+						</md-button>
+						<md-button aria-label="link" class="md-icon-button">
+							<md-icon md-svg-icon="link-variant" aria-label="Webpage"></md-icon>
+						</md-button>
+					</div>
+					<div class="technologies" layout="row" layout-align="center start" flex="80">
+						<span flex></span>
+						<div class="technologie" ng-repeat="tech in p.technos" flex>
+							<img class="techLogo" ng-src="{{getTech(tech).img}}" title="{{getTech(tech).desc}}">
+						</div>
+						<span flex></span>
+					</div>
+				</md-card-actions>
+			</md-card>
+		</div>
+		<!--Category 2-->
+		<div flex="50" flex-sm="100" flex-xs="100" layout="column">
+			<md-card ng-repeat='p in projects' ng-if="p.category==2">
+				<img ng-src="{{p.imgSrc}}" class="sm-card-image" alt="Loading" style="max-height: 100px;">
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-headline">{{p.name}}</span>
+						<span class="md-subhead">{{p.desc}}</span>
+					</md-card-title-text>
+				</md-card-title>
+				<!-- Only < md screens -->
+				<md-card-actions layout="row">
+					<div layout="column" layout-align="center start" flex="10">
+						<md-button aria-label="Github" class="md-icon-button">
+							<md-icon md-svg-icon="github-box" aria-label="Github" ></md-icon>
+						</md-button>
+						<md-button aria-label="link" class="md-icon-button">
+							<md-icon md-svg-icon="link-variant" aria-label="Webpage"></md-icon>
+						</md-button>
+					</div>
+					<div class="technologies" layout="row" layout-align="center start" flex="80">
+						<span flex></span>
+						<div class="technologie" ng-repeat="tech in p.technos" flex>
+							<img class="techLogo" ng-src="{{getTech(tech).img}}" title="{{getTech(tech).desc}}">
+						</div>
+						<span flex></span>
+					</div>
+				</md-card-actions>
+			</md-card>
+		</div>
+	</md-content>
+</div>

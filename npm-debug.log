@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'completion',
+1 verbose cli   '--',
+1 verbose cli   'npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-google-map' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14
+4 verbose mapToRegistry name -/short
+5 verbose mapToRegistry uri https://registry.npmjs.org/-/short
+6 verbose registry.get https://registry.npmjs.org/-/short not expired, no request
+7 verbose stack TypeError: undefined is not a function
+7 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:45:19
+7 verbose stack     at RegClient.get_ (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:130:14)
+7 verbose stack     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:49:12)
+7 verbose stack     at evalmachine.<anonymous>:295:14
+7 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+7 verbose stack     at Object.oncomplete (evalmachine.<anonymous>:93:15)
+8 verbose cwd /home/hadrien/Aptana Studio 3 Workspace/HashOnTheWeb
+9 error Linux 3.13.0-71-generic
+10 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "completion" "--" "npm" "install" "angular-google-map"
+11 error node v0.11.14
+12 error npm  v2.0.0
+13 error undefined is not a function
+14 error If you need help, you may report this error at:
+14 error     <http://github.com/npm/npm/issues>
+15 verbose exit [ 1, true ]

@@ -1,0 +1,151 @@
+/*********GENERIC ELEMENTS**********/
+body {
+	text-align: justify;
+}
+.main{
+	background-color: #C0C0C0;
+}
+.content {
+	margin: 65px 0 0 0;
+}
+.section {
+	background-color: white;
+	padding: 0 7% 50px 7%;
+}
+h1 {
+	text-align: center;
+	color: #FFFFFF;
+}
+h4 {
+	text-align: center;
+	color: #EEEEEE;
+}
+a {
+	color: #2489AD;
+}
+
+/************INTRODUCTIONS***************/
+.introduction{
+	background-color: black;
+	min-height: 200px;
+}
+#introPerso{
+	min-height: 600px;
+	background-position: center;
+	background-attachment:fixed;
+	background-image: url("assets/images/introperso.jpg");
+}
+#introEdu {
+	background-position: center;
+	background-image: url("assets/images/library.jpg");
+}
+#introExp {
+	background-position: center;
+	background-image: url("assets/images/experience.jpg");
+}
+#introProjects{
+	background-position: center;
+	background-image: url("assets/images/projects.jpg");
+}
+#introSkills{
+	background-position: center;
+	background-image: url("assets/images/skills.jpg");
+}
+#introContact{
+	background-position: center;
+	background-image: url("assets/images/carte.png");
+}
+.banner {
+	opacity: 0.7; 
+	background-color: black; 
+	color: white; 
+	position: bottom
+}
+
+#mainToolbar {
+	position: fixed;
+	margin-bottom: 0px;
+}
+/*******Presentation*********/
+#profilePicture {
+	max-width: 80%;
+}
+/*******Technologies*******/
+.techLogo {
+	height: 70px;
+	max-width: 70px;
+}
+/****Experience****/
+.companyLogo {
+	height: 100px;
+	max-width: 200px;
+	display: block;
+	margin: 20% auto;
+}
+/****Education****/
+.schoolLogo {
+	height: 80px;
+	max-width: 200px;
+	display: block;
+	margin: 20% auto;
+}
+/****Projects****/
+.projectLogo {
+	height: 70px;
+	max-width: 70px;
+}
+
+/****Skills *****/
+.skillDetails{
+	white-space:nowrap;
+	font-size: small;
+	margin: 2%;
+}
+.skillDescription{
+	margin: 20px 0 20px 0
+}
+.skillRating{
+	min-height: 20px;
+	min-width: 80%;
+}
+.atomicRating{
+	min-width: 10%;
+}
+/****CONTACT*****/
+#contact {
+	background-color: #A1D3F0;
+}
+.center-text{
+	text-align: center;
+}
+.contact-element{
+	margin: 0 3% 0 3%;
+}
+
+/****BG COLORS****/
+.bg-blue{
+	background-color: #08298C;
+}
+.bg-red{
+	background-color: #f22933;
+}
+.bg-green{
+	background-color: #1fa118;
+}
+.bg-orange{
+	background-color: #f09f27;
+}
+.bg-grey{
+	background-color: #C0C0C0
+}
+/***TESTS***/
+.testblue{
+	background-color: blue;
+	border-style: groove;
+}
+
+.testred{
+	background-color: red;
+}
+
+

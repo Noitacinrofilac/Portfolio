@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!--style-->
+		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+		<link rel="stylesheet" href="style.css">
+
+		<title>Hash is on the web</title>
+	</head>
+	
+	<body ng-app="mainApp" layout="column">
+		<div class="main" role="main"layout="column">
+			<md-toolbar id="mainToolbar">
+				<div class="md-toolbar-tools" ng-controller="headerController as headCtrl" layout-align="center start">
+					<h2 class="md-toolbar-tools md-toolbar-tools-bottom" ><span class="md-flex" ng-click="gotoAnchor('introPerso')" flex="20"> Hadrien Luttiau </span>
+					<md-button ng-click="gotoAnchor('introExp')">
+						Experience
+					</md-button>
+					<md-button ng-click="gotoAnchor('introEdu')">
+						Education
+					</md-button>
+					<md-button ng-click="gotoAnchor('introProjects')">
+						Projects
+					</md-button>
+					<md-button ng-click="gotoAnchor('introSkills')">
+						skills
+					</md-button>
+					<md-button ng-click="gotoAnchor('introContact')">
+						Contact
+					</md-button></h2>
+				</div>
+			</md-toolbar>
+			<div class="content" layout="column" ng-controller="generalController as gCtrl">
+				<div class="introduction" layout="column" layout-padding id="introPerso">
+					<span flex="50"></span>
+					<div flex class="banner">
+						<H1>About me</H1>
+						<h4>On this page you can find all the information you need to know me more.
+						Let's start with a short descritpion of myself !</h4>
+					</div>
+					<span flex></span>
+				</div>
+				<div class="section row" layout-padding id="me" ng-include="'app/portfolio/presentation/presentation.html'"></div>
+				<div class="introduction" layout="column" layout-padding id="introExp">
+					<span flex="33"></span>
+					<div class="banner">
+						<H1 flex="33">Experiences</H1>
+						<h4>Here is what I've done the past 2 years.</h4>
+					</div>
+					<span flex="33"></span>
+
+				</div>
+				<div class="section row" layout-padding id="exp" ng-include="'app/portfolio/experience/experience.html'"></div>
+				<div class="introduction" layout-padding id="introEdu">
+					<span flex="33"></span>
+					<div flex="33" class="banner">
+						<H1>Education</H1>
+						<h4>You can follow my journey to reach where I am right now.</h4>
+					</div>
+					<span flex="33"></span>
+				</div>
+				<div class="section row" layout-padding id="edu" ng-include="'app/portfolio/education/education.html'"></div>
+				<div class="introduction" layout-padding id="introProjects">
+					<span flex="33"></span>
+					<div flex="33" class="banner">
+						<H1>Projects</H1>
+						<h4>Here you can find an overview of the main project I've done. If you want more information please click on the links !</h4>
+					</div>
+					<span flex="33"></span>
+				</div>
+				<div class="section row" layout-padding id="projects" ng-include="'app/portfolio/projects/projects.html'"></div>
+				<div class="introduction" layout-padding id="introSkills">
+					<span flex="33"></span>
+					<div flex="33" class="banner">
+						<H1>Skills</H1>
+						<h4>A quick overview of my skills.</h4>
+					</div>
+					<span flex="33"></span>
+				</div>
+				<div class="section row" layout-padding id="skills" ng-include="'app/portfolio/skills/skills.html'"></div>
+				<div class="introduction" layout-padding id="introContact">
+					<span flex="33"></span>
+					<div class="banner">
+						<H1 flex="33">Contact</H1>
+						<h4>Please feel free to email me, call me or even send me a letter.</h4>
+					</div>
+					<span flex="33"></span>
+				</div>
+				<div class="section row" layout-padding id="contact" ng-include="'app/portfolio/contact/contact.html'"></div>
+			</div>
+		</div>
+		<!--Angular-->
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-material/angular-material.min.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+		<script src="node_modules/angular-aria/angular-aria.min.js"></script>
+		<!--Angular gmaps API-->
+		<script src='/node_modules/lodash/lodash.min.js'></script>
+		<script src='/node_modules/angular-google-maps/node_modules/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+		<script src='/node_modules/angular-google-maps/dist/angular-google-maps.min.js'></script>
+		<!--JS-->
+		<script src="app.js"></script>
+		<script src="app/portfolio/experience/experience.js"></script>
+		<script src="app/portfolio/education/education.js"></script>
+		<script src="app/portfolio/projects/projects.js"></script>
+		<script src="app/portfolio/skills/skills.js"></script>
+		<script src="app/portfolio/contact/contact.js"></script>
+
+	</body>
+</html>

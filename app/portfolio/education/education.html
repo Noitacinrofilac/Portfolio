@@ -1,0 +1,26 @@
+<div ng-controller="educationController as eduCtrl">
+	<div class="education" ng-repeat="edu in eduCtrl.educationList" layout="row">
+		<div flex="20" hide show-gt-sm layout-align="center">
+			<a target="_blank" ng-href="http://{{edu.link}}"><img class="schoolLogo" src="{{edu.logoSrc}}"/></a>
+		</div>
+		<div class="eduContent" flex>
+			<div class="eduHeader">
+				<h3><a target="_blank" ng-href="http://{{edu.link}}">{{edu.school}}</a></h3>
+				<div layout="row">
+					<div flex="{{edu.diploma=='none'?100: 35}}">
+						<md-icon md-svg-icon="calendar"></md-icon>
+						{{edu.date.start}} - {{edu.date.end}}
+					</div>
+					<div flex ng-hide="{{edu.diploma=='none'}}">
+						<em> <md-icon md-svg-icon="school"></md-icon> {{edu.diploma}} </em>
+					</div>
+				</div>
+			</div>
+			<div class="eduInformation">
+				<p>
+					{{edu.description}}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
