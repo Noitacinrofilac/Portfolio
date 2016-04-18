@@ -1,10 +1,10 @@
-var app = angular.module("mainApp",['uiGmapgoogle-maps']);
+var app = angular.module("mainApp");//,['uiGmapgoogle-maps']
 var contact = {
 	email : "hadrien.luttiau@gmail.com",
 	address : "Torggatan 26, Skövde 54130, Sweden",
 	phone : "+46 7 68 37 47 68",
-	linkedin : "www.linkedin.com",
-	github : "www.github.com"
+	linkedin : "https://www.linkedin.com/in/hadrienluttiau/en",
+	github : "https://github.com/Noitacinrofilac"
 }
 
 app.controller('contactController', function($anchorScroll, $location, $scope) {
@@ -43,7 +43,7 @@ app.controller('contactController', function($anchorScroll, $location, $scope) {
 	};
 
 }); 
-
+/*
 app.config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
         //    key: 'your api key',
@@ -61,4 +61,4 @@ $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
     uiGmapGoogleMapApi.then(function(maps) {
 
     });
-});
+});*/
